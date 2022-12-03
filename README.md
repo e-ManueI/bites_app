@@ -15,4 +15,6 @@
  - Migrate `python manage.py migrate`.
  - In the terminal within the `BITESAPP` folder, create a superuser using the command `python manage.py createsuperuser`. Fill in the `username`, `email` and `password`.
  - Run the live-server `python manage.py runserver`.
+
+ <hr>
  
