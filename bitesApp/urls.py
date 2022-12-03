@@ -21,7 +21,7 @@ from django.conf import settings
 ''' path to bites && admin urls '''
 
 urlpatterns = [
-    path('bites/', include('bites.urls')),
+    path('', include('bites.urls')),
     path('admin/', admin.site.urls)
 ]
 if settings.DEBUG:

@@ -8,7 +8,7 @@ from django.urls import reverse_lazy
 
 class HomeView(generic.ListView):
 
-    template_name = 'bites/home.html'
+    template_name = 'home.html'
     context_object_name = 'bites_list'
 
     def get_queryset(self):
@@ -20,7 +20,7 @@ class HomeView(generic.ListView):
 class DetailView(generic.DetailView):
 
     model = Menu
-    template_name = 'bites/detail.html'
+    template_name = 'detail.html'
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
@@ -30,7 +30,7 @@ class DetailView(generic.DetailView):
 
 class CreateBites(generic.CreateView):
     model = Menu
-    template_name = 'bites/new.html'
+    template_name = 'new.html'
     fields = ['name','price','category','image']
     
 
@@ -38,14 +38,14 @@ class CreateBites(generic.CreateView):
     
 class UpdateBites(generic.UpdateView):
     model = Menu
-    template_name = 'bites/update.html'
+    template_name = 'update.html'
     fields = ['name','price','category','image']
 
 '''........ class based built-in view for delete modal object ......'''
 
 class DeleteBites(generic.DeleteView):
     model = Menu
-    template_name = 'bites/delete.html'
+    template_name = 'delete.html'
     success_url = reverse_lazy('bites:home')
 
 

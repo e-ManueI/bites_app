@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block something %}
+<div class="container-fluid main">
+    <h1>Available <span>Bites</span></h1>
+    {% if bites_list %}
+    <div class="row foods">
+        {% for bite in bites_list %}
+        <div class="col-md-4 food">
+            <div class="card mx-auto">
+                <img src="{{ bite.image.url }}" class="card-img-top img-fluid" alt="...">
+                <div class="card-body">
+
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <h6><b>{{ bite.name }}</b> </h6>
+                        </div>
+                        <div class="col-sm-6">
+                            <a href="{% url 'bites:detail' bite.id %}" class="btn btn1 btn-sm">See More</a>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                        </div>
+                        <div class="col-sm-6 p-2">
+                            <h6><b>{{ bite.price }}$</b> </h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    {% endif %}
+</div>
+{% endblock %}
