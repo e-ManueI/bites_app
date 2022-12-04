@@ -13,7 +13,7 @@
  - Initiate the command in the terminal to make a virtual environment.
     ````python -m venv venv````
  - Install the requirements by using the command `pip install -r requirements.txt`.
- - Create the required db and user in psql and remember to change the `DATABASES` dictionary settings including `NAME`, `PASSWORD`, `HOST` AND `PORT` in `settings.py`.
+ - Create the required db and user in psql and remember to change the `DATABASES` dictionary settings including `HOST` AND `PORT` in `settings.py` and `PASSWORD`, `NAME` and `USER` in .env file.
  - Make migrations `python manage.py makemigrations`.
  - Migrate `python manage.py migrate`.
  - In the terminal within the `BITESAPP` folder, create a superuser using the command `python manage.py createsuperuser`. Fill in the `username`, `email` and `password`.
